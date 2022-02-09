@@ -16,4 +16,4 @@ npm-debug.log
 
 **/mysql/
 
-**/.DS_Store
+*.DS_Store
