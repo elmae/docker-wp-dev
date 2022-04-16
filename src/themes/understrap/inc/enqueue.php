@@ -20,6 +20,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		$suffix            = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 		// Grab asset urls.
+		$srcAnime = "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
 		$theme_styles  = "/css/theme{$suffix}.css";
 		$theme_scripts = "/js/theme{$suffix}.js";
 		if ( 'bootstrap4' === $bootstrap_version ) {
@@ -29,7 +30,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 
 		$css_version = $theme_version . '.' . filemtime( get_template_directory() . $theme_styles );
 		wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . $theme_styles, array(), $css_version );
-
+    wp_enqueue_style( 'animate-styles', $srcAnime, false, '1.1', 'all' );
 		wp_enqueue_script( 'jquery' );
 
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . $theme_scripts );

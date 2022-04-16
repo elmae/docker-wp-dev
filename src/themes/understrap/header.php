@@ -26,6 +26,9 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
   <?php do_action( 'wp_body_open' ); ?>
   <div class="site" id="page">
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="<?php get_theme_file_uri();?>" type="videos/mp4">
+    </video>
     <!-- header top -->
     <?php get_template_part( 'global-templates/header-top'); ?>
     <!-- end header top -->
